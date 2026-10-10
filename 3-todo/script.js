@@ -42,6 +42,7 @@ function clearCompleted() {
 }
 
 function getVisibleTasks() {
+  console.log(tasks);
   return tasks;
 }
 
@@ -50,9 +51,13 @@ function updateCounter() {
 }
 
 function render() {
+  list.innerHTML = "";
   const visible = getVisibleTasks();
-  for (let i = 1; i <= visible.length; i++) {
+  for (let i = 0; i < visible.length; i++) {
+
     const task = visible[i];
+        console.log(task);
+
     const li = document.createElement("li");
     li.className = "task";
     if (task.done) {
@@ -61,6 +66,7 @@ function render() {
 
     const span = document.createElement("span");
     span.className = "task__text";
+
     span.textContent = task.text;
     span.addEventListener("click", () => toggleTask(task.id));
 
