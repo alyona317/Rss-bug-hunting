@@ -33,13 +33,15 @@ body {
 }
 
 .gallery {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   flex-wrap: nowrap;
   justify-content: flex-start;
   gap: 0;
   max-width: 1000px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
@@ -51,6 +53,7 @@ body {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+
 }
 
 .card:hover {
