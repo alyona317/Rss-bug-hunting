@@ -38,6 +38,8 @@ function getFiltered() {
     result.sort((a, b) => a.price - b.price);
   } else if (sort === "desc") {
     result.sort((a, b) => b.price - a.price);
+  } if (sort === "default"){
+    result.sort((a, b) => a.id - b.id);
   }
 
   return result;
