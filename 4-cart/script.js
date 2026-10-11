@@ -99,7 +99,7 @@ function renderCart() {
   });
 
   if (discount) {
-    total = total - total * discount;
+    total = total - (total * discount);
   }
 
   badgeEl.textContent = cartNum;
