@@ -26,8 +26,12 @@ function getFiltered() {
     result = result.filter((p) => p.name.toLowerCase().includes(search));
   }
 
-  if (category !== "all") {
-    result = products.filter((p) => p.category !== category);
+  if (category == "phone") {
+    result = products.filter((p) => p.category === category);
+  } if (category == "laptop") {
+    result = products.filter((p) => p.category === category);
+  } if (category == "audio") {
+    result = products.filter((p) => p.category === category);
   }
 
   if (sort === "asc") {
