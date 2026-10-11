@@ -43,7 +43,11 @@ function clearCompleted() {
 }
 
 function getVisibleTasks() {
-  console.log(tasks);
+  if (currentFilter === "active") {
+    return tasks.filter((t) => !t.done);
+  } else if (currentFilter === "completed") {
+    return tasks.filter((t) => t.done);
+  }
   return tasks;
 }
 
